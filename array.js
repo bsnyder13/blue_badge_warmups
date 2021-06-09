@@ -47,7 +47,7 @@ function foodAlergyCheck(food){
         return "You can eat"
     }
 } 
-*/
+
 //array push challenge
 
 let cards = [2, 8, "K", 9, 10, 3, 4, "Q", 7, "J", 5, 6, "A"]
@@ -78,4 +78,24 @@ function isFaceCard(card){
             result = false
     }
     return result
+}
+*/
+
+let animals = ["bat", "tiger", "yak", "monkey", "snake", "lizard", "panda", "monkey", "hyena"]
+
+let zooTrip = {
+    seen: [],
+    animalsSeen: 0
+}
+
+animals.forEach((animal) => {
+    console.log(`${animal} was seen today at the zoo!`)
+    if (!zooTrip.seen.includes(animal)) zooTrip.animalsSeen++
+    else {console.log(animal, "is a repeat!")}
+    seenAtTheZoo(animal)
+})
+console.log(zooTrip.seen)
+
+function seenAtTheZoo(animal){
+    zooTrip.seen.push(animal)
 }
